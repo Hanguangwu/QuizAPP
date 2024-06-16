@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".SQLiteActivity">
+
+    <EditText
+        android:id="@+id/question_name_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="请输入问题题干："
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/choice1_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入问题的第一个选项"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/choice2_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入问题的第二个选项"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/choice3_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入问题的第三个选项"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/choice4_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入问题的第四个选项"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/rightAnswer_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="请输入问题的答案"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="addQuestion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="增加" />
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="queryAllQuestions"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="查询" />
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="updateQuestion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="更新" />
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="deleteQuestion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+    </LinearLayout>
+
+    <Button
+        android:onClick="returnToUpperLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回">
+
+    </Button>
+
+    <TextView
+        android:id="@+id/contentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp" />
+
+</LinearLayout>
